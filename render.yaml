@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: php-dashboard
+    env: docker
+    plan: free
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO
+    branch: main
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    buildFilter:
+      paths:
+        - public/**/*
+        - Dockerfile
+        - render.yaml
